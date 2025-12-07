@@ -26,7 +26,7 @@ double provincialTax(double income, string prov)
         prov[i] = tolower((unsigned char)prov[i]);
 
     // Ontario
-    if (prov == "ontario" || prov == "on")
+    if (prov == "Ontario" || prov == "on")
     {
         if (income <= 52886.0)
             return income * 0.0505;
@@ -41,7 +41,7 @@ double provincialTax(double income, string prov)
     }
 
     // British Columbia
-    if (prov == "british columbia" || prov == "bc")
+    if (prov == "British Columbia" || prov == "bc")
     {
         if (income <= 49279.0)
             return income * 0.0506;
@@ -60,7 +60,7 @@ double provincialTax(double income, string prov)
     }
 
     // Alberta
-    if (prov == "alberta" || prov == "ab")
+    if (prov == "Alberta" || prov == "ab")
     {
         if (income <= 151234.0)
             return income * 0.10;
@@ -75,7 +75,7 @@ double provincialTax(double income, string prov)
     }
 
     // Saskatchewan
-    if (prov == "saskatchewan" || prov == "sk")
+    if (prov == "Saskatchewan" || prov == "sk")
     {
         if (income <= 53463.0)
             return income * 0.105;
@@ -86,7 +86,7 @@ double provincialTax(double income, string prov)
     }
 
     // Manitoba
-    if (prov == "manitoba" || prov == "mb")
+    if (prov == "Manitoba" || prov == "mb")
     {
         if (income <= 47564.0)
             return income * 0.108;
@@ -97,7 +97,7 @@ double provincialTax(double income, string prov)
     }
 
     // Quebec
-    if (prov == "quebec" || prov == "qc")
+    if (prov == "Quebec" || prov == "qc")
     {
         if (income <= 53255.0)
             return income * 0.14;
@@ -110,7 +110,7 @@ double provincialTax(double income, string prov)
     }
 
     // New Brunswick
-    if (prov == "new brunswick" || prov == "nb")
+    if (prov == "New Brunswick" || prov == "nb")
     {
         if (income <= 51306.0)
             return income * 0.094;
@@ -123,7 +123,7 @@ double provincialTax(double income, string prov)
     }
 
     // Nova Scotia
-    if (prov == "nova scotia" || prov == "ns")
+    if (prov == "Nova Scotia" || prov == "ns")
     {
         if (income <= 30507.0)
             return income * 0.0879;
@@ -138,7 +138,7 @@ double provincialTax(double income, string prov)
     }
 
     // Prince Edward Island
-    if (prov == "prince edward island" || prov == "pei" || prov == "pe")
+    if (prov == "Prince Edward Island" || prov == "pei" || prov == "pe")
     {
         if (income <= 33328.0)
             return income * 0.095;
@@ -153,7 +153,7 @@ double provincialTax(double income, string prov)
     }
 
     // Newfoundland & Labrador
-    if (prov == "newfoundland and labrador" || prov == "nl")
+    if (prov == "Newfoundland and Labrador" || prov == "nl")
     {
         if (income <= 44192.0)
             return income * 0.087;
