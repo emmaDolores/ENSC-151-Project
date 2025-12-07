@@ -1,5 +1,7 @@
 Canadian Income Tax Calculator
-ENSC-151 Simon Fraser University.
+
+ENSC-151 Simon Fraser University
+
 Emma, Duda, Dante, Kotaro, Jacob
 
 This code will prompt the user for the province they reside in and their annual income.
