@@ -20,14 +20,27 @@ struct TaxBracket {
 // --- 2. Centralized Tax Data (2025 Rates) ---
 
 // Federal Tax Brackets
-// Source: Assumed data based on user's original code structure
-const vector<TaxBracket> FEDERAL_BRACKETS = {
-    {57375.0, 0.145, 0.0},
-    {114750.0, 0.205, 57375.0 * 0.145},
-    {177882.0, 0.26, 57375.0 * 0.145 + (114750.0 - 57375.0) * 0.205},
-    {253414.0, 0.29, 57375.0 * 0.145 + (114750.0 - 57375.0) * 0.205 + (177882.0 - 114750.0) * 0.26},
-    {99999999.0, 0.33, 57375.0 * 0.145 + (114750.0 - 57375.0) * 0.205 + (177882.0 - 114750.0) * 0.26 + (253414.0 - 177882.0) * 0.29}
-};
+double federalTax(double income) {
+    const double brackets[] = {57375.0, 114750.0, 177882.0, 253414.0};
+    const double rates[]    = {0.145,   0.205,    0.26,     0.29,     0.33};
+
+    double tax = 0.0;
+    double prev = 0.0;
+
+    for (int i = 0; i < 4; i++) {
+        if (income > brackets[i]) {
+            tax += (brackets[i] - prev) * rates[i];
+            prev = brackets[i];
+        } else {
+            tax += (income - prev) * rates[i];
+            return tax;
+        }
+    }
+
+    // Final bracket (income above last threshold)
+    tax += (income - prev) * rates[4];
+    return 0;
+}
 
 // Provincial Tax Brackets (using a map for easy lookup)
 // Note: Using a large number (99999999.0) for the final bracket's limit
