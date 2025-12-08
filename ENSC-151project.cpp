@@ -224,6 +224,7 @@ int main()
     double totalDeductions = fTax + pTax;
     double netIncome = income - totalDeductions;
 
+    cout << "\nNote: All calculated amounts are estimates.\n"; 
     cout << "\n---- DEDUCTION BREAKDOWN ----\n";
     cout << "Federal tax:      $" << fTax << "\n";
     cout << "Provincial tax:   $" << pTax << "\n";
